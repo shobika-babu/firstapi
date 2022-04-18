@@ -1,0 +1,77 @@
+<section>
+    <div class="container-fluid">
+     <div class="row justify-content-center">
+         <div class="col-lg-7 ppr-0 decor">
+             <owl-carousel-o [options]="customOptions">            
+                 <ng-template carouselSlide>
+                     <img src="assets/banner-2.webp"  class="height-100" alt="clients">
+                 </ng-template>
+                 <ng-template carouselSlide>
+                     <img src="assets/banner-2.jpg"  class="height-100" alt="clients">
+                 </ng-template> 
+             </owl-carousel-o>
+         </div>
+         <div class="col-lg-5 ppr-0">
+             <div class="login-background">
+                 <img src="../../assets/logo.png"  height="50px;" class="logos mb-4">
+                 
+                 <form [formGroup]="registerform" (ngSubmit)="onsubmitregisterform()">
+                     <div class="row mb-4">
+                         <div class="col-lg-6">
+                             <label>First Name</label>
+                             <input type="text" class="form-control" formControlName="firstname" [ngClass]="{'is-invalid':submitted && f.firstname.errors}">
+                         </div>
+                         <div class="col-lg-6">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" formControlName="lastname" [ngClass]="{'is-invalid':submitted && f.lastname.errors}">
+                        </div>
+                     </div>
+                     <div class="row mb-4">
+                         <div class="col-lg-6">
+                             <label>Email</label>
+                             <input type="email" class="form-control" formControlName="email_id" [ngClass]="{'is-invalid':submitted && f.email_id.errors}">
+                         </div>
+                         <div class="col-lg-6">
+                            <label>Phone Number</label>
+                            <input type="text" class="form-control" formControlName="phonenumber" [ngClass]="{'is-invalid':submitted && f.phonenumber.errors}">
+                        </div>
+                     </div>
+                     <div class="row mb-4">
+                        <div class="col-lg-6">
+                            <label>Password</label>
+                            <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':submitted && f.passwors}">
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control" formControlName="c_password" [ngClass]="{'is-invalid':submitted && f.c_password.errors}">
+                        </div>
+                     </div>
+                     <div class="row mb-4">
+                        <div class="col-lg-6">
+                            <label>Date of Birth</label>
+                            <input type="date" class="form-control" formControlName="dob" [ngClass]="{'is-invalid':submitted && f.dob.errors}">
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Select Gender</label>
+                            <select class="form-control" formControlName="gender" [ngClass]="{'is-invalid':submitted && f.gender.errors}">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Transgender</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="row mb-4">
+                         
+                         <div class="col-lg-12 ">
+                             <div class="text-right">
+                                 <button class="btn btn-primary" >Submit</button>
+                             </div> 
+                         </div>
+                     </div>      
+                 </form>
+             </div>
+         </div>
+     </div>
+    </div>
+ </section>
+ 
